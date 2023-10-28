@@ -1,0 +1,96 @@
+:root {
+    --font-family-main: consolas, "Times New Roman", serif;
+    --font-size-s: 12px;
+    --font-line-s: 20px;
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+
+    --font-size-m: 16px;
+    --font-line-m: 24px;
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+    --font-size-l: 24px;
+    --font-line-l: 32px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+    --font-size-xl: 32px;
+    --font-line-xl: 48px;
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+    --bg-color: var(--gray800);
+    --inverted-bg-color: var(--gray700);
+    --secondary-color: var(--blue900);
+    --primary-color: var(--blue700);
+    --inverted-primary-color: var(--white);
+    --inverted-secondary-color: #c4cddb;
+    --hover: var(--blue900);
+    --secondary-hover: var(--gray800);
+    --modal_color: #c4cddb;
+    --modal_font: var(--gray700);
+
+    --skeleton-color: #1515ad;
+    --skeleton-shadow: #2b2be8;
+
+    --card-bg: #2c313a;
+    --card-font: var(--blue700);
+    --listbox-bg: #292f3a;
+
+    --gray800: #1a202c;
+
+    @media screen and (max-width: 570px) {
+        --font-size-m: 14px;
+        --font-line-m: 20px;
+
+        --font-size-l: 20px;
+        --font-line-l: 28px;
+
+        --font-size-xl: 28px;
+        --font-line-xl: 36px;
+    }
+
+    /* Transitions */
+    --base-transition: 0.3s all ease-in-out;
+    /*  Black & White */
+    --white: #ffffff;
+    --black: #000000;
+
+
+
+
+    /* Overlay */
+    --overlay-color: rgba(0 0 0 / 50%);
+
+    /*  Gray */
+    --gray50: #f7fafc;
+    --gray100: #edf2f7;
+    --gray200: #e2e8f0;
+    --gray400: #a0aec0;
+    --gray500: #131314;
+    --gray600: #4a5568;
+    --gray700: #2d3748;
+    --gray800: #222c41;
+
+
+
+    /* Green */
+    --green700: #276749;
+
+    /* Teal */
+    --teal300: #4FD1C5;
+    --teal400: #31B2AC;
+    --teal500: #319795;
+    --teal700: #285e61;
+
+    /* Blue */
+    --blue700: #4578b6;
+    --blue900: #657793;
+    --blue1200: #a4bae1;
+    /* Cyan */
+    --cyan700: #0987a0;
+
+
+
+
+    /* Z-index */
+    --modal-z-index: 10;
+
+}

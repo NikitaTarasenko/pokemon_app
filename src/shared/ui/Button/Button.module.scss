@@ -1,0 +1,10 @@
+.Button {
+    cursor: pointer;
+    color: var(--primary-color);
+    padding: 6px 15px;
+
+    &:hover {
+        opacity: .7;
+        fill-opacity: .7;
+    }
+}

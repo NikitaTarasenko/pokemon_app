@@ -1,0 +1,64 @@
+.InputWraper {
+    display: flex;
+}
+
+@media(max-width:500px) {
+    .InputWraper {
+        flex-direction: column;
+    }
+}
+
+.input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: transparent;
+    text-shadow: 0 0 0 var(--modal_color);
+
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.placeholder {
+    margin-right: 5px;
+    color: var(--inverted-primary-color);
+}
+
+.caretWrapper {
+
+    flex-grow: 1;
+    position: relative;
+}
+
+.caret {
+    height: 3px;
+    width: 9px;
+    background-color: var(--modal_color);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+
+    animation: blink 0.7s forwards infinite;
+}
+
+.readOnly {
+    opacity: .4;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+
+    }
+
+    50% {
+        opacity: 0.01;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

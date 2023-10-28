@@ -1,0 +1,39 @@
+@import "reset";
+@import "variables/global";
+
+.app {
+    font: var(--font-m);
+    color: var(--primary-color);
+}
+
+/* width */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+
+}
+
+
+.app {
+    background: var(--bg-color);
+    min-height: 100vh;
+}
+
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #888;
+
+    cursor: pointer;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
