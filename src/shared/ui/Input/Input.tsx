@@ -25,7 +25,7 @@ interface InputProps extends HTMLInputProps {
 export const Input = memo((props: InputProps) => {
     const {
         className,
-        value,
+        value = '',
         onChange,
         type,
         placeholder,
@@ -78,6 +78,7 @@ export const Input = memo((props: InputProps) => {
                     onBlur={onBlur}
                     onSelect={onSelect}
                     readOnly={readOnly}
+                    placeholder=' type name such as "pikachu"'
                     {...otherProps}
                 />
                 {isCaretVisible && (

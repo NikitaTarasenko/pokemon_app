@@ -1,14 +1,10 @@
-import React, { ButtonHTMLAttributes, ReactNode } from 'react';
+import React, { ButtonHTMLAttributes, ReactNode, memo } from 'react';
 import styles from './Button.module.scss';
 import { Modes, classNames } from 'shared/lib/classNames/classNames';
 
 export enum ThemeButton {
-    CLEAR = 'clear',
     OUTLINE = 'outline',
-    OUTLINE_RED = 'outline_red',
     BACKGROUND = 'background',
-    BACKGROUND_INVERTED = 'background_inverted',
-    BACKGROUND_INVERTED_OUTL = 'background_inverted_outlined',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -18,7 +14,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children?: ReactNode;
 }
 
-const Button = (props: ButtonProps) => {
+const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
@@ -34,6 +30,7 @@ const Button = (props: ButtonProps) => {
 
     return (
         <button
+            type="button"
             className={classNames(styles.Button, mods, [className])}
             {...otherProps}
             disabled={disabled}
@@ -41,6 +38,6 @@ const Button = (props: ButtonProps) => {
             {children}
         </button>
     );
-};
+});
 
 export default Button;

@@ -1,0 +1,17 @@
+.PageWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.trigger {
+
+    height: 20px;
+    margin: 10px;
+    margin-top: 300px;
+    z-index: 2;
+}

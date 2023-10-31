@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import './styles/index.scss';
-import AppRouter from './router/ui/AppRouter';
+import AppRouter from './providers/router/ui/AppRouter';
 
 function App() {
     return (
