@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:prod": "react-scripts build",
     "test": "jest --config ./config/jest/jest.config.ts",
     "eject": "react-scripts eject"
   },
