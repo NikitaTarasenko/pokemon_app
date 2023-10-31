@@ -1,0 +1,12 @@
+.categories {
+    display: flex;
+    margin-top: 20px;
+
+    & div {
+        margin-right: 15px;
+        min-width: 60px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

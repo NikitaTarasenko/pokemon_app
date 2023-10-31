@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: ['plugin:react/recommended'],
     overrides: [
@@ -19,7 +20,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react'],
+    plugins: ['react', 'react-hooks'],
     rules: {
         'react/display-name': 'off',
         'react/jsx-filename-extension': [
@@ -41,7 +42,10 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'linebreak-style': 0,
         'no-param-reassign': 'off',
-
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+        'no-param-reassign': 'off',
+        'react/no-array-index-key': 'off', // Checks
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
 };

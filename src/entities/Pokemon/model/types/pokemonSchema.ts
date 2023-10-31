@@ -1,7 +1,8 @@
-import { Pokemons } from './pokemon';
+import { PokemonItemInfo, Pokemons } from './pokemon';
 
 export interface PokemonSchema {
     isLoading: boolean;
     error?: string;
-    data?: Pokemons;
+    detailsInfo?: PokemonItemInfo;
+    openedDetails: false;
 }

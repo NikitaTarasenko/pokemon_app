@@ -1,18 +1,14 @@
 export interface PokemonItem {
     name: string;
-    url: string;
+    url?: string;
 }
 export interface PokemonItemInfo {
-    abilities: any;
-    forms: any;
-    game_indices: any;
-    held_items: any;
-    id: any;
-    is_default: any;
-    location_area_encounters: any;
+    abilities: any[];
+    forms: any[];
+    game_indices: any[];
+    held_items: any[];
     moves: any;
-    past_abilities: any;
-    past_types: any;
+    name: string;
     species: any;
     sprites: any;
     stats: any;

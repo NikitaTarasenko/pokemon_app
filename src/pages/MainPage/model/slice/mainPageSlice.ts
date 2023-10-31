@@ -20,9 +20,8 @@ const initialState: MainPageSchema = {
     isLoading: false,
     search: '',
     view: PokemonView.TABLE,
-    type: PokemonType.ALL,
-    page: 1,
-    limit: 10,
+    offset: 0,
+    limit: 12,
     hasMore: true,
     _inited: false,
 };
@@ -35,21 +34,17 @@ const mainPageSlice = createSlice({
         setView: (state, action: PayloadAction<PokemonView>) => {
             state.view = action.payload;
         },
-        setPage: (state, action: PayloadAction<number>) => {
-            state.page = action.payload;
+        setLimit: (state, action: PayloadAction<number>) => {
+            state.limit = action.payload;
         },
 
         setSearch: (state, action: PayloadAction<string>) => {
             state.search = action.payload;
         },
 
-        initState: (state) => {
-            state.limit = state.view === PokemonView.LIST ? 3 : 12;
+        setOffset: (state) => {
+            state.offset = state.view === PokemonView.LIST ? 3 : 12;
             state._inited = true;
-        },
-
-        setType: (state, action: PayloadAction<PokemonType>) => {
-            state.type = action.payload;
         },
     },
     extraReducers: (builder) => {
@@ -59,7 +54,7 @@ const mainPageSlice = createSlice({
         });
         builder.addCase(fetchPokemonList.fulfilled, (state, action) => {
             state.isLoading = false;
-            state.hasMore = action.payload.count >= state.limit;
+            state.hasMore = action.payload.next !== null;
             state.data = action.payload;
         });
         builder.addCase(fetchPokemonList.rejected, (state, action) => {

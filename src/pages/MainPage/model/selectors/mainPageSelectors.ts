@@ -5,10 +5,10 @@ export const getMainPageIsloading = (state: StateSchema) =>
     state.mainPage?.isLoading || false;
 
 export const getMainPageLimit = (state: StateSchema) =>
-    state.mainPage?.limit || 10;
+    state.mainPage?.limit || 12;
 
-export const getMainPageNumber = (state: StateSchema) =>
-    state.mainPage?.page || 1;
+export const getMainPageNumberOffset = (state: StateSchema) =>
+    state.mainPage?.offset || 12;
 
 export const getMainPageHasMore = (state: StateSchema) =>
     state.mainPage?.hasMore;
@@ -21,9 +21,6 @@ export const getMainPageInited = (state: StateSchema) =>
 
 export const getMainPageSearch = (state: StateSchema) =>
     state.mainPage?.search ?? '';
-
-export const getMainPageType = (state: StateSchema) =>
-    state.mainPage?.type ?? PokemonType.ALL;
 
 export const getPokemons = (state: StateSchema) => state.mainPage.data;
 

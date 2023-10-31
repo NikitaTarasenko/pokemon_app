@@ -3,14 +3,11 @@ import { ThunkConfig } from 'app/providers/StoreProvider';
 import { Pokemons } from 'entities/Pokemon';
 import {
     getMainPageLimit,
-    getMainPageNumber,
-    getMainPageSearch,
+    getMainPageNumberOffset,
 } from '../../selectors/mainPageSelectors';
-import axios from 'axios';
 
 interface FetchedPokemonListProps {
     limit?: number;
-    name?: string;
 }
 
 export const fetchPokemonList = createAsyncThunk<
@@ -21,11 +18,10 @@ export const fetchPokemonList = createAsyncThunk<
     'mainPage/fetchPokemonList',
     async (props, { extra, rejectWithValue, getState }) => {
         const limit = getMainPageLimit(getState());
-        const search = getMainPageSearch(getState());
-        const page = getMainPageNumber(getState());
+
         try {
             const response = await extra.api.get<Pokemons>(
-                `/pokemon/${search}`,
+                `/pokemon/?limit=${limit}&offset=${0}`,
                 {
                     params: {
                         // _limit: limit,
